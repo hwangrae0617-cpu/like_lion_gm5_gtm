@@ -2,30 +2,41 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>GTM 실습 - 홈</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE SKIN | 하이엔드 스킨케어</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f4; }
-        nav { background: #333; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
-        .card { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
+        :root { --primary: #1a1a1a; --accent: #c5a059; --bg: #fdfdfd; }
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--primary); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; letter-spacing: 2px; }
+        .nav-links a { margin-left: 30px; text-decoration: none; color: var(--primary); font-weight: 500; font-size: 14px; }
+        .hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80') center/cover; color: #fff; }
+        .hero-content h2 { font-family: 'Playfair Display', serif; font-size: 64px; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff; text-decoration: none; font-weight: bold; transition: 0.3s; border: 1px solid var(--primary); cursor: pointer; }
+        .btn:hover { background: transparent; color: var(--primary); }
+        .hero .btn { background: #fff; color: var(--primary); border: none; }
+        footer { padding: 50px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
-
     <nav>
-    <a href="index.html">🏠 홈</a>
-    <a href="signup.html">📝 회원가입</a>
-    <a href="product.html">🛍️ 상품상세</a>
-</nav>
+        <div class="logo">LUXE SKIN</div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="signup.html">MEMBERSHIP</a>
+            <a href="product.html">SHOP</a>
+        </div>
+    </nav>
 
-<div class="card">
-    <h2>🏠 메인 홈 페이지</h2>
-    <p>여기는 메인 주소입니다. 상단 메뉴를 눌러 진짜 다른 페이지로 이동해 보세요.</p>
-    <p>주소가 바뀔 때마다 GTM 미리보기 창에 어떤 변화가 생기는지 관찰하는 것이 이번 교시의 핵심입니다.</p>
-    <button class="btn">일반 클릭 테스트</button>
-</div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Timeless Beauty</h2>
+            <p>본연의 아름다움을 깨우는 럭셔리 스킨케어 솔루션</p>
+            <a href="product.html" class="btn">EXPERIENCE NOW</a>
+        </div>
+    </section>
 
+    <footer>&copy; 2024 LUXE SKIN. All Rights Reserved.</footer>
 </body>
 </html>
