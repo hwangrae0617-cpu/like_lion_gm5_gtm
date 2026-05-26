@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GTM 실습 - 상품상세</title>
+
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f4; }
+        nav { background: #333; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        .card { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .spacer { height: 1500px; background: linear-gradient(to bottom, #fff, #ddd); padding: 20px; margin: 20px 0; color: #666; border-left: 5px dashed #007bff; }
+        .banner { background: #ffcc00; padding: 30px; text-align: center; font-weight: bold; font-size: 18px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <a href="index.html">🏠 홈</a>
+    <a href="signup.html">📝 회원가입</a>
+    <a href="product.html">🛍️ 상품상세</a>
+</nav>
+
+<div class="card">
+    <h2>🛍️ 스크롤 & 요소 가시성 실험실</h2>
+    <p>이 페이지의 주소는 <b>/product.html</b>입니다. 스크롤 센서를 테스트하기 위해 아래로 아주 길게 만들었습니다.</p>
+    <p>👇 마우스 휠을 아래로 끝까지 내려서 숨겨진 ID 배너를 찾아보세요!</p>
+    
+    <div class="spacer">
+        <p>열심히 내려가는 중... 25%... 50%... 75%...</p>
+    </div>
+
+    <div id="hidden-coupon-banner" class="banner xans-smart-banner-admin-RES00002">
+        🎁 대박! 끝까지 내려온 분들에게만 노출되는 비밀 쿠폰 배너입니다!
+    </div>
+</div>
+
+</body>
+</html>
