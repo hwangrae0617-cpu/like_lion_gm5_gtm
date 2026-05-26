@@ -8,26 +8,29 @@
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background: #f8f8f8; }
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; border-bottom: 1px solid #eee; }
         .logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
-        .signup-container { max-width: 400px; margin: 80px auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h2 { text-align: center; margin-bottom: 30px; font-weight: 300; letter-spacing: 1px; }
-        input { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-        .btn-submit { width: 100%; padding: 15px; background: #1a1a1a; color: #fff; border: none; font-weight: bold; cursor: pointer; letter-spacing: 1px; }
+        .signup-container { max-width: 450px; margin: 80px auto; background: #fff; padding: 50px; border-radius: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; }
+        h2 { font-weight: 300; letter-spacing: 2px; margin-bottom: 40px; }
+        input { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; font-size: 14px; box-sizing: border-box; }
+        .btn-submit { width: 100%; padding: 18px; background: #1a1a1a; color: #fff; border: none; font-weight: bold; cursor: pointer; letter-spacing: 2px; margin-top: 20px; }
         .btn-submit:hover { background: #333; }
+        .back-link { display: block; margin-top: 30px; font-size: 12px; color: #999; text-decoration: none; }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">LUXE SKIN</div>
-        <div style="font-size: 14px;"><a href="index.html" style="text-decoration:none; color:#333;">BACK TO HOME</a></div>
+        <div style="font-size: 14px;"><a href="index.html" style="text-decoration:none; color:#333;">CLOSE</a></div>
     </nav>
 
     <div class="signup-container">
-        <h2>JOIN US</h2>
-        <form id="luxe-signup-form" onsubmit="alert('LUXE SKIN의 멤버가 되신 것을 환영합니다!'); return false;">
-            <input type="text" placeholder="NAME" required>
+        <h2>MEMBERSHIP JOIN</h2>
+        <form id="luxe-signup-form" onsubmit="alert('럭스 스킨 멤버십에 가입되셨습니다.'); return false;">
+            <input type="text" placeholder="FULL NAME" required>
             <input type="email" placeholder="EMAIL ADDRESS" required>
+            <input type="text" placeholder="PHONE NUMBER">
             <button type="submit" class="btn-submit">CREATE ACCOUNT</button>
         </form>
+        <a href="index.html" class="back-link">BACK TO MAIN HOME</a>
     </div>
 </body>
 </html>
