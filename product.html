@@ -6,51 +6,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; border-bottom: 1px solid #eee; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 100; }
         .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; letter-spacing: 2px; }
-        .product-intro { display: flex; padding: 80px 10%; align-items: center; gap: 50px; }
-        .product-img { flex: 1; background: #eee; height: 500px; display: flex; align-items: center; justify-content: center; }
+        .product-section { display: flex; padding: 100px 10%; gap: 80px; align-items: center; }
+        .product-img { flex: 1; background: #f4f4f4; padding: 50px; text-align: center; }
+        .product-img img { max-width: 100%; height: auto; }
         .product-info { flex: 1; }
-        .product-info h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 10px; }
-        .price { font-size: 24px; color: #c5a059; margin-bottom: 30px; }
-        .spacer { height: 1200px; padding: 100px 10%; text-align: center; background: #fafafa; border-top: 1px solid #eee; }
-        .scroll-indicator { color: #999; font-size: 14px; animation: bounce 2s infinite; }
+        .product-info h1 { font-family: 'Playfair Display', serif; font-size: 56px; margin: 0 0 20px 0; }
+        .price { font-size: 28px; color: #c5a059; margin-bottom: 40px; font-weight: 300; }
+        .add-cart-btn { padding: 20px 60px; background: #1a1a1a; color: #fff; border: none; font-weight: bold; cursor: pointer; width: 100%; letter-spacing: 2px; }
+        
+        .long-description { height: 1500px; padding: 150px 10%; text-align: center; background: #fafafa; }
+        .scroll-hint { font-size: 14px; color: #999; margin-top: 50px; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
-        .secret-banner { background: #1a1a1a; color: #fff; padding: 80px; text-align: center; border-radius: 0; margin-top: 50px; }
-        .secret-banner h3 { font-family: 'Playfair Display', serif; font-size: 32px; color: #c5a059; }
+        
+        /* 💡 GTM 요소 가시성 실습을 위한 핵심 배너입니다 */
+        .special-offer-banner { background: #000; color: #fff; padding: 100px 50px; text-align: center; }
+        .special-offer-banner h3 { font-family: 'Playfair Display', serif; font-size: 42px; color: #c5a059; margin-bottom: 20px; }
+        .promo-code { font-size: 32px; letter-spacing: 10px; border: 1px dashed #c5a059; padding: 20px; display: inline-block; margin-top: 30px; }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">LUXE SKIN</div>
-        <div style="font-size: 14px;"><a href="index.html" style="text-decoration:none; color:#333;">BACK TO HOME</a></div>
+        <div style="font-size: 14px;"><a href="index.html" style="text-decoration:none; color:#333;">SHOP ALL</a></div>
     </nav>
 
-    <div class="product-intro">
+    <div class="product-section">
         <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" alt="Serum">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80" alt="Luxe Serum">
         </div>
         <div class="product-info">
             <h1>The Midnight Serum</h1>
             <p class="price">₩128,000</p>
-            <p>밤 사이 피부의 자생력을 높여주는 럭스 스킨의 베스트셀러 세럼입니다.</p>
-            <button class="btn" id="add-to-cart-btn" style="padding: 15px 50px; background: #1a1a1a; color: #fff; border: none; font-weight: bold; cursor: pointer;">ADD TO CART</button>
+            <p style="line-height: 1.8; color: #666; margin-bottom: 40px;">당신의 피부 시간을 되돌리는 단 한 방울. 밤 사이 피부 자생력을 극대화하는 럭스 스킨의 시그니처 세럼입니다.</p>
+            <button id="add-to-cart-btn" class="add-cart-btn">ADD TO CART</button>
         </div>
     </div>
 
-    <div class="spacer">
-        <div class="scroll-indicator">▼ SCROLL TO DISCOVER MORE</div>
-        <p style="margin-top: 300px; color: #bbb;">(브랜드 스토리와 상세 성분표가 길게 나열되는 구간입니다...)</p>
+    <div class="long-description">
+        <div class="scroll-hint">▼ SCROLL TO REVEAL SECRETS</div>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; margin-top: 200px;">Our Ingredients</h2>
+        <p style="margin-top: 500px; color: #999;">(상세 성분 설명 및 브랜드 스토리가 아주 길게 이어지는 구간...)</p>
     </div>
 
-    <div id="hidden-coupon-banner" class="secret-banner xans-smart-banner-admin-RES00002">
+    <div id="vip-offer" class="special-offer-banner xans-smart-banner-admin-RES00002">
         <h3>PRIVATE OFFER</h3>
-        <p>상세 페이지를 끝까지 읽어주신 당신께만 드리는 15% 할인 코드</p>
-        <p style="font-size: 24px; font-weight: bold; letter-spacing: 5px; margin-top: 20px;">LUXESKIN15</p>
+        <p>상세 페이지를 끝까지 탐독해주신 VIP 고객님께만 드리는 15% 할인 코드</p>
+        <div class="promo-code">LUXE15OFF</div>
     </div>
 
-    <footer style="padding: 50px; text-align: center; background: #fff; border-top: 1px solid #eee;">
-        &copy; 2024 LUXE SKIN. All Rights Reserved.
+    <footer style="padding: 60px; text-align: center; border-top: 1px solid #eee;">
+        &copy; 2024 LUXE SKIN.
     </footer>
 </body>
 </html>
