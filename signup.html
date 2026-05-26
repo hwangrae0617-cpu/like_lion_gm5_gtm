@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GTM 실습 - 회원가입</title>
+
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f4; }
+        nav { background: #333; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        .card { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn { display: inline-block; padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
+        input { width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <a href="index.html">🏠 홈</a>
+    <a href="signup.html">📝 회원가입</a>
+    <a href="product.html">🛍️ 상품상세</a>
+</nav>
+
+<div class="card">
+    <h2>📝 회원가입 실험실</h2>
+    <p>주소창을 보세요! 뒤에 <b>/signup.html</b>이라고 진짜 페이지가 바뀌었죠?</p>
+    
+    <form id="mutsa-form" onsubmit="alert('가입 성공!'); return false;">
+        <label>이메일 주소</label>
+        <input type="email" placeholder="test@example.com" required>
+        <button type="submit" class="btn">회원가입 완료하기</button>
+    </form>
+</div>
+
+</body>
+</html>
